@@ -1,0 +1,18 @@
+<div class="d-flex flex-column">
+    <span class="text-danger text-truncate">
+        @if (userInput.length % 2 !== 0) {
+            {{ userInput }}
+        }
+    </span>
+    @if(oddWordsList.length === 0 ) {
+        <span class="text"> No odd length words </span>
+    } @else {
+        @for(word of oddWordsList; track word ) {
+            <div class="row">
+                <div class="col">
+                    <div>{{ word }}</div>
+                </div>
+            </div>
+        }
+    }
+</div>
